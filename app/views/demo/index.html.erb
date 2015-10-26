@@ -1,0 +1,111 @@
+# encoding: UTF-8
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>W2UI Demo: grid-25</title>
+    <link rel="stylesheet" type="text/css" href="http://w2ui.com/src/w2ui-1.4.2.min.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <script type="text/javascript" src="http://w2ui.com/src/w2ui-1.4.2.min.js"></script>
+<script type="text/javascript">
+$(function () {
+	$().w2destroy('grid');
+    $('#grid').w2grid({ 
+        name: 'grid',
+        show: {
+            footer: true,
+            lineNumbers : true,
+            selectColumn: true
+        },
+        reorderColumns: true,
+        columns: [
+			{ field: 'recid', caption: 'Rec. Id', size: '200px', resizable: true, hidden: true },
+			{ field: 'id', caption: 'ID', size: '200px', resizable: true },
+			{ field: 'submit_date', caption: 'Submit Date', size: '200px', resizable: true },
+			{ field: 'project_name', caption: 'Project Name', size: '200px', resizable: true },
+			{ field: 'trimming', caption: 'Trimming', size: '200px', resizable: true },
+			{ field: 'assembler', caption: 'Assembler', size: '200px', resizable: true },
+			{ field: 'depth_filter', caption: 'Depth filter', size: '100px', resizable: true },
+			{ field: 'collection_date', caption: 'Collection date', size: '200px', resizable: true },
+			{ field: 'organism', caption: 'Organism', size: '200px', resizable: true },
+			{ field: 'host', caption: 'Host', size: '200px', resizable: true },
+			{ field: 'place', caption: 'Place', size: '200px', resizable: true },
+			{ field: 'total_reads', caption: 'Total reads', size: '200px', resizable: true },
+			{ field: 'quality_trimming', caption: 'Quality trimming', size: '200px', resizable: true },
+			{ field: 'genome_subtract', caption: 'Genome subtract', size: '200px', resizable: true },
+			{ field: 'number_of_contigs', caption: 'Number of contigs', size: '200px', resizable: true },
+			{ field: 'gc_rate', caption: 'GC%', size: '200px', resizable: true },
+			{ field: 'contiglength', caption: 'contiglength(bp)', size: '200px', resizable: true },
+			{ field: 'total_base', caption: 'Total base(bp)', size: '200px', resizable: true },
+			{ field: 'n50', caption: 'N50 (bp)', size: '200px', resizable: true },
+			{ field: 'number_of_genes', caption: 'Number of genes', size: '200px', resizable: true },
+			{ field: 'comment', caption: 'Comment', size: '200px', resizable: true },
+			{ field: 'inc_type', caption: 'Inc type', size: '200px', resizable: true },
+			{ field: 'ar_genes', caption: 'AR genes', size: '200px', resizable: true }
+        ],
+        records: [
+            {
+				recid: 1,
+				id: 'ID=20xxxxxxxxxxxxxxx',
+				submit_date: '2015 00/00-00:00',
+				project_name: 'Pla-1253',
+				trimming: '5 48 15 80 0 skewer',
+				assembler: 'A5_miseq 0',
+				depth_filter: '100',
+				collection_date: '2015/1/1',
+				organism: 'E. cloacae',
+				host: 'Human',
+				place: 'XXXXXXXX',
+				total_reads: '128072',
+				quality_trimming: '88998',
+				genome_subtract: '',
+				number_of_contigs: '2',
+				gc_rate: '51.5',
+				contiglength: '2,770-19,225',
+				total_base: '1,995',
+				n50: '19,225',
+				number_of_genes: '31',
+				comment: 'MRY=15-412, size=23Kbp,',
+				inc_type: 'R',
+				ar_genes: 'beta-lactamase (id: 100, cov: 94) fluroquinolone acetylating aminoglycoside acetyltransferase (id: 100, cov: 100)'
+			},
+            {
+				recid: 2,
+				id: 'ID=20xxxxxxxxxxxxxxx',
+				submit_date: '2015 00/00-00:00',
+				project_name: 'Pla-1253',
+				trimming: '5 48 15 80 0 skewer',
+				assembler: 'A5_miseq 0',
+				depth_filter: '100',
+				collection_date: '2015/1/1',
+				organism: 'E. cloacae',
+				host: 'Human',
+				place: 'XXXXXXXX',
+				total_reads: '128072',
+				quality_trimming: '88998',
+				genome_subtract: '',
+				number_of_contigs: '2',
+				gc_rate: '51.5',
+				contiglength: '2,770-19,225',
+				total_base: '1,995',
+				n50: '19,225',
+				number_of_genes: '31',
+				comment: 'MRY=15-412, size=23Kbp,',
+				inc_type: 'R',
+				ar_genes: 'beta-lactamase (id: 100, cov: 94) fluroquinolone acetylating aminoglycoside acetyltransferase (id: 100, cov: 100)'
+			}
+        ]
+    });    
+});
+</script>
+</head>
+<body>
+
+<div id="condition" style="width: 100%; height: 40px;">
+	<input type="text"></input> Search by <select><option value="all">All Column</option><option value="id">ID</option></select>
+</div>
+<div id="grid" style="width: 100%; height: 600px;">
+</div>
+
+</body>
+</html>
